@@ -15,15 +15,20 @@ struct IgniteWebsite {
 }
 
 struct ExampleSite: Site {    
-    var name = "Hello World"
-    var baseTitle = " – My Awesome Site"
-    var url = URL("https://www.example.com")
+    var name = "Ignite Test"
+    var baseTitle = " – Ignite Thing"
+    var url = URL("https://mpot05.github.io/IgniteTest")
     var builtInIconsEnabled = true
+    var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby, .java]
 
-    var author = "John Appleseed"
+    var author = "Michael Potter"
 
     var homePage = Home()
     var theme = MyTheme()
+    
+    var pages: [any StaticPage] {
+        Page2()
+    }
 }
 
 

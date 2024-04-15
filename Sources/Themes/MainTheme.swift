@@ -7,7 +7,11 @@ struct MyTheme: Theme {
             Head(for: page, in: context)
 
             Body {
+                NavBar()
+                
                 page.body
+                    .padding(.extraLarge)
+                    .padding(.top,80)
             }
         }
     }
