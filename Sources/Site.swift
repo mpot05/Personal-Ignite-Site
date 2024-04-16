@@ -28,6 +28,7 @@ struct ExampleSite: Site {
     
     var pages: [any StaticPage] {
         Page2()
+        Cookie()
     }
 }
 

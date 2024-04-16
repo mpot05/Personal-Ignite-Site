@@ -24,6 +24,7 @@ struct Home: StaticPage {
                 }
                 
             }.backgroundColor(.purple)
+            Divider()
             Text("Below Divider")
             Accordion {
                 Item("First", startsOpen: true) {

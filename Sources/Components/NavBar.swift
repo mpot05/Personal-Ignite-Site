@@ -13,6 +13,7 @@ struct NavBar: Component {
         NavigationBar {
             Link("Home", target: "/IgniteTest/index.html")
             Link("Page2", target: "/IgniteTest/page2/index.html")
+            Link("Cookie", target: "/IgniteTest/cookie/index.html")
             Dropdown("Drop") {
                 Link("Home 2", target: "/IgniteTest/index.html")
                 Link("Page2 2", target: "/IgniteTest/page2/index.html")
