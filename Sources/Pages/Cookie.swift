@@ -22,8 +22,7 @@ struct Cookie: StaticPage {
             Button {
                 Text("Reset")
             }.id("reset")
-//            Script(code: "var cookie = 0;document.getElementById(\"reset\").onclick=function(){cookie = 0; document.getElementById(\"score\").innerHTML=cookie;}; document.getElementById(\"Cookie\").onclick=function(){cookie += 1; document.getElementById(\"score\").innerHTML=cookie;}")
-            Script(file: "cookie.js")
+            Script(code: "var cookie = 0;document.getElementById(\"reset\").onclick=function(){cookie = 0; document.getElementById(\"score\").innerHTML=cookie;}; document.getElementById(\"Cookie\").onclick=function(){cookie += 1; document.getElementById(\"score\").innerHTML=cookie;}")
             
             
             
