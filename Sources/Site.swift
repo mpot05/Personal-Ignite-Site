@@ -19,7 +19,7 @@ struct ExampleSite: Site {
     var baseTitle = " – Ignite Thing"
     var url = URL("https://mpot05.github.io/IgniteTest")
     var builtInIconsEnabled = true
-    var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby, .java, .c, .cLike, .cPlusPlus, .cSharp, .appleScript, .typeScript, .bash, .css, .dart, .git, .go, .javaScript, .kotlin, .markdown, .markup, .markupTemplating, .objectiveC, .perl, .php, .rust, .sql, .yaml]
+    var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby, .java]
 
     var author = "Michael Potter"
 
