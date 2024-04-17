@@ -27,7 +27,7 @@ struct Page2: StaticPage {
                 Text("Weee")
                 Text("More string")
             }
-            Image("/IgniteTest/images/Haverford_H.jpeg")
+            Image(decorative: "/IgniteTest/images/Haverford_H.jpeg")
         }.padding(.top, .medium)
             .margin()
     }

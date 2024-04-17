@@ -7,28 +7,34 @@
 
 import Foundation
 import Ignite
-
 struct Cookie: StaticPage {
     var title = "Ignite Clicker"
-    
     func body(context: PublishingContext) -> [BlockElement] {
         Group {
             Text("Cookie")
             Text("0").id("score")
             Button {
-                Image("/images/cookie.png")
-            }.id("Cookie")
+                Image("/images/cookie.png", description: "A cookie to click").textSelection(.none)
+            }.addCustomAttribute(name: "onclick", value: "clickCookie()")
             Divider()
             Button {
-                Text("Reset")
-            }.id("reset")
-            Script(code: "var cookie = 0;document.getElementById(\"reset\").onclick=function(){cookie = 0; document.getElementById(\"score\").innerHTML=cookie;}; document.getElementById(\"Cookie\").onclick=function(){cookie += 1; document.getElementById(\"score\").innerHTML=cookie;}")
+                Text("Reset").textSelection(.all)
+            }.addCustomAttribute(name: "onclick", value: "reset()")
+            Spacer(size: 5).textSelection(.none)
+            Button {
+                Text("Manual Upgrade 1: 25").id("man1").textSelection(.all)
+            }.addCustomAttribute(name: "onclick", value: "manualUpg1()")
+            Spacer(size: 5).textSelection(.none)
+            Button {
+                Text("Auto Upgrade 1: 50").id("auto1").textSelection(.all)
+            }.addCustomAttribute(name: "onclick", value: "autoUpg1()")
             
             
             
+            Script(file: "/IgniteTest/js/clicker.js")
             
             
         }.padding(.top, .extraLarge)
-            .margin().style("text-align: center")
+            .margin().style("text-align: center").textSelection(.none)
     }
 }

@@ -3,11 +3,15 @@ import Ignite
 
 @main
 struct IgniteWebsite {
+    public static var fm = FileManager();
     static func main() {
         let site = ExampleSite()
+        let workDir = "/Users/mpotter14/Desktop/IgniteStarter/"
 
         do {
             try site.publish()
+            try fm.copyItem(atPath: (workDir + "Sources/js/clicker.js"), toPath: (workDir + "Build/js/clicker.js"))
+            
         } catch {
             print(error.localizedDescription)
         }

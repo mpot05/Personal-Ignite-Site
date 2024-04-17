@@ -25,5 +25,6 @@ struct NavBar: Component {
         .navigationBarStyle(.dark)
         .position(.fixedTop)
         .navigationItemAlignment(.default)
+        .textSelection(.none)
     }
 }
